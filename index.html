@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-    <p>Zoe Barrington</p>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Sliding Puzzle</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"> -->
+</head>
+<body>
 
+  <header>
+    <h1>Sliding Puzzle<h1>
+    </header>
+
+    <main class="container">
+
+      <div class="buttons">
+        <button id="startButton">Start</button>
+        <button type="reset" name="resetButton">Reset</button>
+      </div>
+
+      <div class="grid">
+        <div class="boxes" id="box1"><img src="image/PROJECT1PHOTOS/image_part_001.jpg" alt="top left"  class="images"><div>
+        <div class="boxes" id="box2"><img src="image/PROJECT1PHOTOS/image_part_002.jpg" alt="top middle" class="images"></div>
+        <div class="boxes" id="blank"><img src="image/PROJECT1PHOTOS/image_part_003.jpg" alt="top right" class="images"></div>
+        <div class="boxes" id="box3"><img src="image/PROJECT1PHOTOS/image_part_004.jpg" alt="middle left" class="images"></div>
+        <div class="boxes" id="box4"><img src="image/PROJECT1PHOTOS/image_part_005.jpg" alt="middle middle" class="images"></div>
+        <div class="boxes" id="box5"><img src="image/PROJECT1PHOTOS/image_part_006.jpg" alt="middle right" class="images"></div>
+        <div class="boxes" id="box6"><img src="image/PROJECT1PHOTOS/image_part_007.jpg" alt="bottom left" class="images"></div>
+        <div class="boxes" id="box7"><img src="image/PROJECT1PHOTOS/image_part_008.jpg" alt="bottom middle" class="images"></div>
+        <div class="boxes" id="box8"><img src="image/PROJECT1PHOTOS/image_part_009.jpg" alt="bottom right" class="images"></div>
+      </div>
+
+      <div class="moves div">
+        <h2 class="moves">Number of Moves Used</h2>
+        <p id="score">0</p>
+      </div>
+
+      </main>
+      <script src="app.js" charset="utf-8"></script>
+
+    </script>
   </body>
-</html>
+  </html>
