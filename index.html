@@ -13,10 +13,10 @@
     </header>
 
     <main class="container">
-
-      <div class="buttons">
-        
-      <button onclick="randomizeBoxPositions()" type="button">Start<button>
+<div class="buttons">
+      <button id="start" onclick="initializePuzzle(3);">Start</button>
+      <button id="autoComplete">Auto Complete</button>
+      <button id="playAgain">Play Again!</button>
       </div>
 
       <div class="grid">
@@ -31,10 +31,10 @@
         <div class="boxes" id="box8"><img src="image/PROJECT1PHOTOS/image_part_009.jpg" alt="bottom right" class="images"></div>
       </div>
 
-      <div class="moves div">
+      <span class="moves div">
         <h2 class="moves">Number of Moves Used</h2>
-        <p id="score">0</p>
-      </div>
+        <span id="score">0</span>
+      </span>
 
       </main>
       <script src="app.js" charset="utf-8"></script>

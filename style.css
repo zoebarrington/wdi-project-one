@@ -4,6 +4,7 @@
   justify-content: center;
   width: 510px;
   height: 510px;
+  margin: 20px;
 }
 
 .boxes {
@@ -47,6 +48,16 @@ header {
   margin: 20px;
 }
 
-div.moves {
-  
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#start, #autoComplete, #playAgain {
+  background: transparent;
+  color: orange;
+  border: orange;
+  border: 2px solid orange;
+  border-radius: 6px;
 }

@@ -1,9 +1,35 @@
+//DOM elements
+const box1 = document.getElementById('box1');
+const box2 = document.getElementById('box2');
+const blank = document.getElementById('blank');
+const box3 = document.getElementById('box3');
+const box4 = document.getElementById('box4');
+const box5 = document.getElementById('box5');
+const box6 = document.getElementById('box6');
+const box7 = document.getElementById('box7');
+const box8 = document.getElementById('box8');
+const arrayOfBoxIds = [box1, box2, blank, box3, box4, box5, box6, box7, box8];
+console.log(arrayOfBoxIds);
 let scoreValue = 0;
-initializePuzzle(3);
+let isClickEventAttached = false;
+const boxes = [];
+const autoCompleteButton = document.getElementById('autoComplete');
+console.log(autoCompleteButton);
 
+// autoCompleteButton.addEventListener('click', autoCompletePuzzle() {
+//   alert('clicked!!')
+// });
+
+// resetBoxList();
+// function resetBoxList() {
+//   boxes.splice(0, 9, ...Array.from(document.querySelector('.grid').childNodes).filter(({tagName}) => tagName === 'DIV'));
+// }
+// 
+// autoCompleteButton.addEventListener('click', resetBoxList());
+
+//initialize puzzle function (unsure where to invoke it)
 function initializePuzzle(numberOfSquaresPerSide) {
   const parent = document.querySelector('.grid');
-  let boxes = [];
 
   resetBoxList();
   randomizeBoxPositions();
@@ -13,23 +39,42 @@ function initializePuzzle(numberOfSquaresPerSide) {
     .forEach(box => box.addEventListener('click', scoreGoesUp));
 
   function scoreGoesUp(event) {
-
     console.log('score should go up!');
     const scoreDisplay = document.getElementById('score');
     scoreValue = scoreValue + 1;
     scoreDisplay.textContent = scoreValue;
   }
+  //click event - still in intialize puzzle function
+  if (!isClickEventAttached) {
 
-
-  Array.from(boxes)
+    Array.from(boxes)
     .filter(box => box.id !== 'blank')
     .forEach(box => box.addEventListener('click', onClick));
+    isClickEventAttached = true;
+  }
 
+  //calling the onClick event added to the click function
   function onClick(event) {
 
     const clickedBox = event.currentTarget;
 
+    console.log('click', boxes);
+
     const indexOfBox = Array.from(boxes).findIndex(box => box === clickedBox);
+
+//check for win function
+    console.log('rearranged boxes', boxes);
+    console.log('non rearranged',arrayOfBoxIds);
+
+    function checkForWin() {
+      if(boxes === arrayOfBoxIds) {
+        alert('you have won!');
+      } else {
+        console.log('keep trying');
+      }
+    }
+
+    checkForWin();
 
 
     if (!isTopRow(indexOfBox)) {
@@ -62,14 +107,16 @@ function initializePuzzle(numberOfSquaresPerSide) {
     }
   }
 
+
   function resetBoxList() {
-    boxes = document.querySelectorAll('.boxes');
-    console.log(boxes);
+    boxes.splice(0, 9, ...Array.from(document.querySelector('.grid').childNodes).filter(({tagName}) => tagName === 'DIV'));
   }
 
+
+
+//function to randomize position of squares
   function randomizeBoxPositions() {
     const orderedBoxes = Array.from(boxes);
-
 
     for (let i = orderedBoxes.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -83,21 +130,17 @@ function initializePuzzle(numberOfSquaresPerSide) {
     resetBoxList();
   }
 
-
   function isTopRow(indexOfBox) {
     return indexOfBox < numberOfSquaresPerSide;
   }
-
 
   function isBottomRow(indexOfBox) {
     return indexOfBox >= numberOfSquaresPerSide ** 2 - numberOfSquaresPerSide;
   }
 
-
   function isLeftRow(indexOfBox) {
     return indexOfBox % numberOfSquaresPerSide === 0;
   }
-
 
   function isRightRow(indexOfBox) {
     return indexOfBox % numberOfSquaresPerSide === numberOfSquaresPerSide - 1;
@@ -111,12 +154,9 @@ function initializePuzzle(numberOfSquaresPerSide) {
     const box1 = boxes[index1];
     const box2 = boxes[index2];
 
-
-
     parent.insertBefore(box2, box1);
 
     resetBoxList();
-
 
     if (index1 < index2) {
 
@@ -136,29 +176,10 @@ function initializePuzzle(numberOfSquaresPerSide) {
   }
 }
 
-// IDs for the array - checkForWin function
-// const box1 = document.getElementById('box1');
-// const box2 = document.getElementById('box2');
-// const blank = document.getElementById('blank');
-// const box3 = document.getElementById('box3');
-// const box4 = document.getElementById('box4');
-// const box5 = document.getElementById('box5');
-// const box6 = document.getElementById('box6');
-// const box7 = document.getElementById('box7');
-// const box8 = document.getElementById('box8');
-// const boxes = document.getElementsByClassName('boxes');
-// console.log(boxes);
+// const playAgain = document.getElementById('playAgain');
+// console.log(playAgain);
+// playAgain.addEventListener('click', playAgainButton());
 //
-// const arrayOfBoxIds = [box1, box2, blank, box3, box4, box5, box6, box7, box8];
-// console.log(arrayOfBoxIds);
-//
-// function checkForWin() {
-//   if(Array.from(boxes) === arrayOfBoxIds) {
-//     return true;
-//   }
+// function playAgainButton() {
+//   window.playAgain.reload(true);
 // }
-// //create object with name and index and image
-
-//make object for each picture
-//create an array of images and put them in array adn then it can randomly generate in the arrayOfBoxIds
-//in
