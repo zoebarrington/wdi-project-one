@@ -36,6 +36,11 @@ body {
 header {
   text-align: center;
   color: white;
+  font-family: fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
 }
 
 .images {
@@ -45,13 +50,18 @@ header {
 
 .moves {
   color: white;
-  margin: 20px;
+  margin: 10px;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  font-family: fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
 }
 
 #start, #autoComplete, #playAgain {
@@ -60,4 +70,43 @@ header {
   border: orange;
   border: 2px solid orange;
   border-radius: 6px;
+  font-family: fantasy;
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+}
+
+.instructions {
+  color: orange;
+  width: 250px;
+  height: 300px;
+  font-family: fantasy;
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+}
+
+.moves.div {
+  height: 200px;
+  color: orange;
+  font-family: fantasy;
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+}
+
+h1 {
+  color: orange;
+  font-family: fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+}
+
+.button:hover {
+  background: blue;
 }

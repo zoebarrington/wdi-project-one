@@ -16,6 +16,12 @@ const boxes = [];
 const autoCompleteButton = document.getElementById('autoComplete');
 console.log(autoCompleteButton);
 
+autoCompleteButton.addEventListener('click', () => {
+  isDemo = !isDemo;
+});
+
+let isDemo = false;
+
 // autoCompleteButton.addEventListener('click', autoCompletePuzzle() {
 //   alert('clicked!!')
 // });
@@ -24,7 +30,7 @@ console.log(autoCompleteButton);
 // function resetBoxList() {
 //   boxes.splice(0, 9, ...Array.from(document.querySelector('.grid').childNodes).filter(({tagName}) => tagName === 'DIV'));
 // }
-// 
+//
 // autoCompleteButton.addEventListener('click', resetBoxList());
 
 //initialize puzzle function (unsure where to invoke it)
@@ -38,7 +44,7 @@ function initializePuzzle(numberOfSquaresPerSide) {
     .filter(box => box.id !== 'blank')
     .forEach(box => box.addEventListener('click', scoreGoesUp));
 
-  function scoreGoesUp(event) {
+  function scoreGoesUp() {
     console.log('score should go up!');
     const scoreDisplay = document.getElementById('score');
     scoreValue = scoreValue + 1;
@@ -48,8 +54,8 @@ function initializePuzzle(numberOfSquaresPerSide) {
   if (!isClickEventAttached) {
 
     Array.from(boxes)
-    .filter(box => box.id !== 'blank')
-    .forEach(box => box.addEventListener('click', onClick));
+      .filter(box => box.id !== 'blank')
+      .forEach(box => box.addEventListener('click', onClick));
     isClickEventAttached = true;
   }
 
@@ -63,11 +69,10 @@ function initializePuzzle(numberOfSquaresPerSide) {
     const indexOfBox = Array.from(boxes).findIndex(box => box === clickedBox);
 
 //check for win function
-    console.log('rearranged boxes', boxes);
-    console.log('non rearranged',arrayOfBoxIds);
 
     function checkForWin() {
-      if(boxes === arrayOfBoxIds) {
+      const win = boxes.map(box => box.id).filter((boxId, index) => boxId === arrayOfBoxIds[index].id).length === 7;
+      if(win) {
         alert('you have won!');
       } else {
         console.log('keep trying');
@@ -114,20 +119,35 @@ function initializePuzzle(numberOfSquaresPerSide) {
 
 
 
+
+
 //function to randomize position of squares
   function randomizeBoxPositions() {
-    const orderedBoxes = Array.from(boxes);
+    const unorderedBoxes = Array.from(boxes);
+    let randomizedBoxes = [];
 
-    for (let i = orderedBoxes.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const temp = orderedBoxes[i];
-
-      orderedBoxes[i] = orderedBoxes[j];
-      orderedBoxes[j] = temp;
+    if(isDemo) {
+      randomizedBoxes = [
+        unorderedBoxes[2],
+        unorderedBoxes[0],
+        unorderedBoxes[1],
+        unorderedBoxes[3],
+        unorderedBoxes[4],
+        unorderedBoxes[5],
+        unorderedBoxes[6],
+        unorderedBoxes[7],
+        unorderedBoxes[8]
+      ];
+    } else {
+      for(let i = 0; i < unorderedBoxes.length; i ++) {
+        const randomNumber = Math.floor(Math.random() * (1 + unorderedBoxes.length));
+        randomizedBoxes.splice(randomNumber, 0, unorderedBoxes[i]);
+      }
     }
 
-    orderedBoxes.forEach(box => parent.appendChild(box));
+    randomizedBoxes.forEach(box => parent.appendChild(box));
     resetBoxList();
+
   }
 
   function isTopRow(indexOfBox) {
@@ -175,6 +195,8 @@ function initializePuzzle(numberOfSquaresPerSide) {
     resetBoxList();
   }
 }
+
+
 
 // const playAgain = document.getElementById('playAgain');
 // console.log(playAgain);

@@ -13,10 +13,10 @@
     </header>
 
     <main class="container">
-<div class="buttons">
-      <button id="start" onclick="initializePuzzle(3);">Start</button>
-      <button id="autoComplete">Auto Complete</button>
-      <button id="playAgain">Play Again!</button>
+      <div class="buttons">
+        <button id="start" onclick="initializePuzzle(3);">Start</button>
+        <button id="autoComplete">Auto Complete</button>
+        <button id="playAgain">Play Again!</button>
       </div>
 
       <div class="grid">
@@ -31,14 +31,21 @@
         <div class="boxes" id="box8"><img src="image/PROJECT1PHOTOS/image_part_009.jpg" alt="bottom right" class="images"></div>
       </div>
 
-      <span class="moves div">
-        <h2 class="moves">Number of Moves Used</h2>
-        <span id="score">0</span>
-      </span>
+      <section class="rightside">
+        <div class ="moves div">
+          <h2 id="moves">Number of Moves Used</h2>
+          <span id="score">0</span>
+        </div>
 
-      </main>
-      <script src="app.js" charset="utf-8"></script>
+        <div class="instructions">
+          <h3>Instructions</h3>
+          <p>The puzzle shows a painting depicting the Greek myth of Icarus. The top right corner of the image has been replaced with a white square. This white square can be moved around by shifting a piece of the image into the white square. By using this one sliding location, you must reassemble the picture. The myth of Icarus will then be revealed!!</p>
+        </div>
+      </section>
 
-    </script>
-  </body>
-  </html>
+    </main>
+    <script src="app.js" charset="utf-8"></script>
+
+  </script>
+</body>
+</html>
