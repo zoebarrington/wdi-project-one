@@ -37,10 +37,12 @@ header {
   text-align: center;
   color: white;
   font-family: fantasy;
-  font-size: 24px;
+  font-size: 50px;
   font-style: normal;
   font-variant: normal;
   font-weight: 700;
+  width: 785px;
+  margin: none;
 }
 
 .images {
@@ -77,6 +79,20 @@ header {
   font-weight: 700;
 }
 
+#start:hover {
+background-color: grey;
+  }
+
+#autoComplete:hover {
+background-color: grey;
+  }
+
+#playAgain:hover {
+  background-color: grey;
+}
+
+//find a pale yellow
+
 .instructions {
   color: orange;
   width: 250px;
@@ -101,12 +117,37 @@ header {
 h1 {
   color: orange;
   font-family: fantasy;
-  font-size: 24px;
+  font-size: 40px;
   font-style: normal;
   font-variant: normal;
   font-weight: 700;
+  margin: none;
 }
 
 .button:hover {
   background: blue;
 }
+
+#score {
+animation: grow 1.5s infinite;
+}
+
+@keyframes grow {
+  0% {
+    font-size: 15px;
+  }
+  50% {
+    font-size: 17px;
+  }
+  100% {
+    font-size: 19px;
+  }
+}
+
+//ring every time click
+//get the hover to work
+//scrolls
+//typewriter
+//audio
+//you won in --- seconds
+//get header to appear from jumbled 

@@ -1,4 +1,5 @@
 //DOM elements
+const score = document.getElementById('score');
 const box1 = document.getElementById('box1');
 const box2 = document.getElementById('box2');
 const blank = document.getElementById('blank');
@@ -15,6 +16,13 @@ let isClickEventAttached = false;
 const boxes = [];
 const autoCompleteButton = document.getElementById('autoComplete');
 console.log(autoCompleteButton);
+const refreshButton = document.getElementById('playAgain');
+
+refreshButton.addEventListener('click', refresh);
+
+function refresh() {
+  window.location.reload();
+}
 
 autoCompleteButton.addEventListener('click', () => {
   isDemo = !isDemo;
@@ -73,7 +81,7 @@ function initializePuzzle(numberOfSquaresPerSide) {
     function checkForWin() {
       const win = boxes.map(box => box.id).filter((boxId, index) => boxId === arrayOfBoxIds[index].id).length === 7;
       if(win) {
-        alert('you have won!');
+        alert('You completed the sliding puzzle in ' + score.textContent + ' moves!');
       } else {
         console.log('keep trying');
       }
@@ -205,3 +213,5 @@ function initializePuzzle(numberOfSquaresPerSide) {
 // function playAgainButton() {
 //   window.playAgain.reload(true);
 // }
+
+//transform
