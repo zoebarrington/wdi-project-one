@@ -27,11 +27,6 @@
   width: 100%;
 }
 
-body {
-  height: 1200px;
-  width: 1200px;
-  background-color: black;
-}
 
 header {
   text-align: center;
@@ -80,12 +75,12 @@ header {
 }
 
 #start:hover {
-background-color: #EDDD72;
-  }
+  background-color: #EDDD72;
+}
 
 #autoComplete:hover {
-background-color: #EDDD72;
-  }
+  background-color: #EDDD72;
+}
 
 #playAgain:hover {
   background-color: #EDDD72;
@@ -132,22 +127,6 @@ h1 {
   background: blue;
 }
 
-h1:hover {
-animation: grow 1.5s infinite;
-}
-
-@keyframes grow {
-  0% {
-    font-size: 15px;
-  }
-  50% {
-    font-size: 17px;
-  }
-  100% {
-    font-size: 19px;
-  }
-}
-
 h3 {
   width: 180px;
   text-align: center;
@@ -158,8 +137,22 @@ h3 {
 }
 
 .text {
-width: 200px;
-    justify-content: center;
-    text-align: center;
-    margin-left: 40px;
-  }
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+  margin-left: 40px;
+}
+
+body {
+  background-image: url(image/PROJECT1PHOTOS/fire.v1.jpg);
+  background-size: 1500px;
+  width: 150%;
+  height: 150%;
+
+}
+
+.winning {
+  background-color:red;
+  color: black;
+  display: none;
+}

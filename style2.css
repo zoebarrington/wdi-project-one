@@ -6,6 +6,7 @@
 
 body {
   background-color: black;
+
 }
 
 .container {
@@ -66,16 +67,22 @@ background-color: black;
 .hiders p:nth-child(9) {
   animation-delay: 16s;
 }
-.hiders p:nth-child(10) {
+/* .hiders p:nth-child(10) {
   animation-delay: 18s;
-}
+} */
 
 a {
 color: white;
+text-decoration: none;
+border: white solid 2px;
+border-radius: 10px;
 }
 
 .button {
   text-align: center;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
 }
  img {
    width: 300px;
