@@ -80,32 +80,36 @@ header {
 }
 
 #start:hover {
-background-color: grey;
+background-color: #EDDD72;
   }
 
 #autoComplete:hover {
-background-color: grey;
+background-color: #EDDD72;
   }
 
 #playAgain:hover {
-  background-color: grey;
+  background-color: #EDDD72;
 }
 
-//find a pale yellow
 
 .instructions {
-  color: orange;
-  width: 250px;
-  height: 300px;
+  color: black;
+  width: 274px;
+  height: 360px;
   font-family: fantasy;
   font-size: 15px;
   font-style: normal;
   font-variant: normal;
   font-weight: 700;
+  background-image: url(image/PROJECT1PHOTOS/transparent-scroll-background.png);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .moves.div {
-  height: 200px;
+  height: 100px;
   color: orange;
   font-family: fantasy;
   font-size: 15px;
@@ -121,14 +125,14 @@ h1 {
   font-style: normal;
   font-variant: normal;
   font-weight: 700;
-  margin: none;
+  margin-top: 50px;
 }
 
 .button:hover {
   background: blue;
 }
 
-#score {
+h1:hover {
 animation: grow 1.5s infinite;
 }
 
@@ -144,10 +148,18 @@ animation: grow 1.5s infinite;
   }
 }
 
-//ring every time click
-//get the hover to work
-//scrolls
-//typewriter
-//audio
-//you won in --- seconds
-//get header to appear from jumbled 
+h3 {
+  width: 180px;
+  text-align: center;
+}
+
+#parainstructions {
+  width: 180px;
+}
+
+.text {
+width: 200px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 40px;
+  }
