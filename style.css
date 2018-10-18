@@ -86,6 +86,10 @@ header {
   background-color: #EDDD72;
 }
 
+.music:hover {
+  background-color: #EDDD72;
+}
+
 
 .instructions {
   color: black;
@@ -151,8 +155,38 @@ body {
 
 }
 
-.winning {
-  background-color:red;
-  color: black;
+#winning {
+  color: orange;
   display: none;
+  z-index:2;
+  position: fixed;
+  top: 300px;
+  left: 370px;
+  font-family: fantasy;
+  font-size: 50px;
+  animation: grow 3s infinite;
+}
+
+@keyframes grow {
+  0% {
+    font-size: 30px;
+  }
+  50% {
+    font-size: 40px;
+  }
+  100% {
+    font-size: 30px;
+  }
+}
+
+.music {
+  color: orange;
+  border: orange solid 2px;
+  font-family: fantasy;
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  border-radius: 6px;
+  background: transparent;
 }
