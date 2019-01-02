@@ -42,7 +42,7 @@ let isDemo = false;
 
 // resetBoxList();
 // function resetBoxList() {
-//   boxes.splice(0, 9, ...Array.from(document.querySelector('.grid').childNodes).filter(({tagName}) => tagName === 'DIV'));
+//   .splice(0, 9, ...Array.from(document.querySelector('.grid').childNodes).filter(({tagName}) => tagName === 'DIV'));
 // }
 //
 // autoCompleteButton.addEventListener('click', resetBoxList());
@@ -64,7 +64,6 @@ function initializePuzzle(numberOfSquaresPerSide) {
     scoreValue = scoreValue + 1;
     scoreDisplay.textContent = scoreValue;
   }
-  //click event - still in intialize puzzle function
   if (!isClickEventAttached) {
 
     Array.from(boxes)
@@ -82,7 +81,7 @@ function initializePuzzle(numberOfSquaresPerSide) {
 //retrieving the index of the clicked box from the array
     const indexOfBox = Array.from(boxes).findIndex(box => box === clickedBox);
 
-//check for win function
+//check for win function- with Matt- need it to be more than 7 right
     function checkForWin() {
       const win = boxes.map(box => box.id).filter((boxId, index) => boxId === arrayOfBoxIds[index].id).length === 7;
       if(win) {
@@ -98,6 +97,10 @@ function initializePuzzle(numberOfSquaresPerSide) {
 //checking if the index of the clicked box is on any of the sides,
 //needs to be registered because the box cannot move outside the grid
 //if the box is NOT (!) on the outer sides, it can move in any direction
+//We need to see if the clicked box is on one of the edges of the puzzle, because we are looking on all four
+//sides of it (above, below, left and right) to see if one of those is the Blank square. If the clicked box
+// is on the edge, we don't want to look for the blank box off the edge.
+
     if (!isTopRow(indexOfBox)) {
       const indexOfOtherBox = indexOfBox - numberOfSquaresPerSide;
 
@@ -137,11 +140,11 @@ function initializePuzzle(numberOfSquaresPerSide) {
     boxes.splice(0, 9, ...Array.from(document.querySelector('.grid').childNodes).filter(({tagName}) => tagName === 'DIV'));
   }
 
-
-
-
-
 //function to randomize position of squares
+//array.from creates an array from the elements in boxes (the tiles on the puzzle)
+//if is demo - when the 'autocomplete is on'
+//random number generates a random number
+//splice - empties the array and refills it with the randomized order
   function randomizeBoxPositions() {
     const unorderedBoxes = Array.from(boxes);
     let randomizedBoxes = [];

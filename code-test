@@ -1,0 +1,29 @@
+const mongoose = require('mongoose');
+const env = require('../config/environment');
+mongoose.connect(env.dbUri);
+const Coffees = require('..models/coffees');
+
+const coffeeItems = [{
+  item: 'Latte',
+  price: 2.50
+}, {
+  item: 'Cappucino',
+  price: 2.50
+}, {
+  item: 'Tea',
+  price: 2.00
+}, {
+  item: 'Flat White',
+  price: 2.50
+}, {
+  item: 'Espresso',
+  price: 2.00
+}];
+
+Coffees.collection.drop();
+
+Coffees.create(coffeeItems)
+  .then(result => {
+    console.log(`created ${result.length} coffees!`);
+    mongoose.connection.close();
+  });
