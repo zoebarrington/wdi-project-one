@@ -1,13 +1,27 @@
 # Sliding Puzzle Game
 
 ## Background
-This version of a sliding puzzle game is based on the famous Greek myth of Daedalus and Icarus.
+This sliding puzzle game is my first project from General Assembly's Web Development Immersive. It took place in week 4.
 
-This sliding puzzle game is my first project from General Assembly's Web Development Immersive. It was an individual project which was built in less than a week, and was the first project I had built from start to finish using HTML, CSS and Javascript.
+It was an individual project which was built in less than a week, and was the first project I had built from start to finish using HTML, CSS and Javascript.
 
+## Course Curriculum:
+### Week 1: Module One   
+* HTML
+* CSS and Animation
+* Sass
+* Javascript
+* jQuery
 
 ## Brief
-To create a single-page web game, using HTML, CSS and JavaScript technologies learnt in the first three weeks of General Assembly's Web Development Immersive.
+To create a single-page web game, using HTML, CSS and JavaScript(jQuery) technologies learnt in the first three weeks of General Assembly's Web Development Immersive.
+
+**Timeframe**: 1 week(October 2018)
+
+## Concept
+Having studied Classics at University, this sliding puzzle game is inspired by the famous Greek myth of Daedalus and Icarus.
+
+The aim of the game is to rearrange the pieces of the sliding puzzle to display the painting of Icarus flying too close to the sun.
 
 ## Introductory Page
 ![Introductory Page](screenshots/introductory-page.png)
