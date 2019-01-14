@@ -13,10 +13,14 @@ It was an individual project which was built in less than a week, and was the fi
 * Javascript
 * jQuery
 
+*Full course curriculum available at bottom of page*
+
+***
+
 ## Brief
 To create a single-page web game, using HTML, CSS and JavaScript(jQuery) technologies learnt in the first three weeks of General Assembly's Web Development Immersive.
 
-**Timeframe**: 1 week(October 2018)
+**Timeframe:** 1 week(October 2018)
 
 ## Concept
 Having studied Classics at University, this sliding puzzle game is inspired by the famous Greek myth of Daedalus and Icarus.
@@ -96,3 +100,46 @@ Due to my planning, I decided it would be better for the boxes to be the divs th
 ## Future Features
 * To include more levels of difficulty, adding more sliding cards to the puzzle as levels increase and with the images getting more complex
 * Drier code with more comments to help other developers understand my thought process
+***
+
+## Course Curriculum
+
+> **Week 1-3** | Module One  
+* HTML5
+* CSS3 and CSS Animation
+* Sass
+* JavaScript
+* jQuery
+
+> **Week 4** | Project One
+
+> **Week 5** | Module Two  
+* Node.js
+* Express.js
+* EJS
+* MongoDB
+* User Authentication  
+
+> **Week 6** | Project Two
+
+> **Week 7-8** | Module Three
+* AngularJS
+* Token Authentication & Session Authentication
+* Third-party APIs
+* Mocha and Chai
+
+> **Week 9** | Project Three
+
+> **Week 10-11** | Module Four
+* React
+* JSX
+* ES6
+
+>**Week 12** | Project Four
+
+***
+## Contact
+### Zoe Barrington  
+Email: zlfbarrington@gmail.com
+
+[Porfolio](zoebarrington.com) | [LinkedIn](https://www.linkedin.com/notifications/) | [GitHub](https://github.com/zoebarrington)
