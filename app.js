@@ -133,9 +133,7 @@ function initializePuzzle(numberOfSquaresPerSide) {
   }
 
 
-//0 - this empties the array, 9 - this is how many elements you want to fill it with
-//...adds the array that is created from array.from (creates an array from the childNodes)
-//in .grid but only with the tag name 'div'
+
   function resetBoxList() {
     boxes.splice(0, 9, ...Array.from(document.querySelector('.grid').childNodes).filter(({tagName}) => tagName === 'DIV'));
   }

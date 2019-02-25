@@ -17,7 +17,7 @@ It was an individual project which was built in less than a week, and was the fi
 
 ***
 
-## Brief
+# Brief
 To create a single-page web game, using HTML, CSS and JavaScript(jQuery) technologies learnt in the first three weeks of General Assembly's Web Development Immersive.
 
 **Timeframe:** 1 week(October 2018)
@@ -57,7 +57,8 @@ function resetBoxList() {
   boxes.splice(0, 9, ...Array.from(document.querySelector('.grid').childNodes).filter(({tagName}) => tagName === 'DIV'));
 }
 ```
-This piece of code resets the boxes of my puzzle into the correct order by creating a function called resetBoxList. Within the function,
+This piece of code resets the boxes of my puzzle into the correct order by creating a function called resetBoxList. Within the function, the splice empties the array and then fills it with 9 elements. The spread operator then adds the array that is created from Array.from (this creates an array from the childNodes) in .grid, but only with the tag name 'div'.
+
 
 ## Featured Piece of Code no.2
 ```Javascript
