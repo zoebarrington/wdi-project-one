@@ -1,9 +1,13 @@
-# Sliding Puzzle Game ![General Assembly](https://camo.githubusercontent.com/6ce15b81c1f06d716d753a61f5db22375fa684da/68747470733a2f2f67612d646173682e73332e616d617a6f6e6177732e636f6d2f70726f64756374696f6e2f6173736574732f6c6f676f2d39663838616536633963333837313639306533333238306663663535376633332e706e67)
+# **Sliding Puzzle Game** ![General Assembly](https://camo.githubusercontent.com/6ce15b81c1f06d716d753a61f5db22375fa684da/68747470733a2f2f67612d646173682e73332e616d617a6f6e6177732e636f6d2f70726f64756374696f6e2f6173736574732f6c6f676f2d39663838616536633963333837313639306533333238306663663535376633332e706e67)
 
 ## Background
-This sliding puzzle game is my first project from General Assembly's Web Development Immersive. It took place in week 4.
+Having studied Classics at University, this sliding puzzle game is inspired by the famous Greek myth of Daedalus and Icarus.
 
-It was an individual project which was built in less than a week, and was the first project I had built from start to finish using HTML, CSS and Javascript.
+The aim of the game is to rearrange the pieces of the sliding puzzle to display the painting of Icarus flying too close to the sun.
+
+This sliding puzzle game is my first project from General Assembly's Web Development Immersive. It took place in week 4. It was an individual project which was built in less than a week, and was the first project I had built from start to finish using HTML, CSS and Javascript.
+
+Launch on [GitHub Pages](https://zoebarrington.github.io/wdi-project-one/). Check out the GitHub [Repo](https://github.com/zoebarrington/wdi-project-one).
 
 ## Course Curriculum:
 ### Week 1: Module One   
@@ -18,14 +22,16 @@ It was an individual project which was built in less than a week, and was the fi
 ***
 
 # Brief
-To create a single-page web game, using HTML, CSS and JavaScript(jQuery) technologies learnt in the first three weeks of General Assembly's Web Development Immersive.
+* **Render a grid-based game in the browser**
+* **Design logic for winning** & **visually display which player won**
+* **Include separate HTML / CSS / JavaScript files**
+* Use **Javascript or jQuery** for **DOM manipulation**
+* **Deploy your game online**, using Github Pages, where the rest of the world can access it
+* Use **semantic markup** for HTML and CSS (adhere to best practices)
 
 **Timeframe:** 1 week(October 2018)
 
-## Concept
-Having studied Classics at University, this sliding puzzle game is inspired by the famous Greek myth of Daedalus and Icarus.
-
-The aim of the game is to rearrange the pieces of the sliding puzzle to display the painting of Icarus flying too close to the sun.
+# **Screenshots**
 
 ## Introductory Page
 ![Introductory Page](screenshots/introductory-page.png)
@@ -98,9 +104,13 @@ The wins were that my code works and I learnt an immense amount from the extensi
 
 Due to my planning, I decided it would be better for the boxes to be the divs themselves, rather than just the content within the divs, and this made the rest of my code must easier to execute.
 
+## Known Bugs
+
+
+
 ## Future Features
 * To include more levels of difficulty, adding more sliding cards to the puzzle as levels increase and with the images getting more complex
-* Drier code with more comments to help other developers understand my thought process
+* Drier code and more refactoring 
 ***
 
 ## Course Curriculum
