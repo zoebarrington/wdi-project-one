@@ -1,4 +1,4 @@
-# **Sliding Puzzle Game** ![General Assembly](https://camo.githubusercontent.com/6ce15b81c1f06d716d753a61f5db22375fa684da/68747470733a2f2f67612d646173682e73332e616d617a6f6e6177732e636f6d2f70726f64756374696f6e2f6173736574732f6c6f676f2d39663838616536633963333837313639306533333238306663663535376633332e706e67)
+# **Sliding Puzzle Game** <img src="https://images.ecosia.org/jD5BlSO0tDLKm_0ETaXJdEyBvjo=/0x390/smart/http%3A%2F%2Fimg13.deviantart.net%2F2f30%2Fi%2F2013%2F187%2F2%2F9%2Ffeather_by_latortuguitaazul-d6ca3u4.png" style="width: 48px;"/>
 
 ## Background
 Having studied Classics at University, this sliding puzzle game is inspired by the famous Greek myth of Daedalus and Icarus.
@@ -110,7 +110,7 @@ Due to my planning, I decided it would be better for the boxes to be the divs th
 
 ## Future Features
 * To include more levels of difficulty, adding more sliding cards to the puzzle as levels increase and with the images getting more complex
-* Drier code and more refactoring 
+* Drier code and more refactoring
 ***
 
 ## Course Curriculum

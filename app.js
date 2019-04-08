@@ -20,22 +20,26 @@ const refreshButton = document.getElementById('playAgain');
 const audioButton = document.querySelector('.music');
 const audio = document.querySelector('audio');
 
+//SIDE BUTTONS SECTION
+
+//audio button
 audioButton.addEventListener('click', () => {
   audio.play();
 });
 
+//refresh button and function
 refreshButton.addEventListener('click', refresh);
-
 function refresh() {
   window.location.reload();
 }
 
+//auto complete button
 autoCompleteButton.addEventListener('click', () => {
   isDemo = !isDemo;
 });
-
 let isDemo = false;
 
+//initialize puzzle function
 function initializePuzzle(numberOfSquaresPerSide) {
   const parent = document.querySelector('.grid');
 
@@ -46,6 +50,7 @@ function initializePuzzle(numberOfSquaresPerSide) {
     .filter(box => box.id !== 'blank')
     .forEach(box => box.addEventListener('click', scoreGoesUp));
 
+//Score count
   function scoreGoesUp() {
     console.log('score should go up!');
     const scoreDisplay = document.getElementById('score');
@@ -66,6 +71,7 @@ function initializePuzzle(numberOfSquaresPerSide) {
 
     console.log('click', boxes);
 
+//checking if the boxes have returned to their original location
     function checkForWin() {
       const win = boxes.map(box => box.id).filter((boxId, index) => boxId === arrayOfBoxIds[index].id).length === 7;
       if(win) {
@@ -77,7 +83,6 @@ function initializePuzzle(numberOfSquaresPerSide) {
     }
 
     checkForWin();
-
 
 
     if (!isTopRow(indexOfBox)) {
@@ -111,12 +116,14 @@ function initializePuzzle(numberOfSquaresPerSide) {
   }
 
 
-
+//resetting the jumbled pieces back to their original places
+//splices
   function resetBoxList() {
     boxes.splice(0, 9, ...Array.from(document.querySelector('.grid').childNodes).filter(({tagName}) => tagName === 'DIV'));
   }
 
 
+//shuffling the pieces of the puzzle
   function randomizeBoxPositions() {
     const unorderedBoxes = Array.from(boxes);
     let randomizedBoxes = [];
@@ -144,6 +151,11 @@ function initializePuzzle(numberOfSquaresPerSide) {
     resetBoxList();
 
   }
+
+  //Need to see if the clicked box is on one of the edges of the puzzle, because we are looking on all four
+  //sides of it (above, below, left and right) to see if one of those is the Blank square. If the clicked box
+  //is on the edge, we don't want to look for the blank box off the edge.
+  //For example, if we click on the top row we don't want to look above that box because there are no boxes there.
 
   function isTopRow(indexOfBox) {
     return indexOfBox < numberOfSquaresPerSide;
@@ -179,7 +191,7 @@ function initializePuzzle(numberOfSquaresPerSide) {
 
         parent.appendChild(box1);
       } else {
-    
+
         parent.insertBefore(box1, boxes[index2 + 1]);
       }
     } else {
