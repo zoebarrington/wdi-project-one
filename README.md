@@ -1,4 +1,4 @@
-# **Sliding Puzzle Game** <img src="https://images.ecosia.org/jD5BlSO0tDLKm_0ETaXJdEyBvjo=/0x390/smart/http%3A%2F%2Fimg13.deviantart.net%2F2f30%2Fi%2F2013%2F187%2F2%2F9%2Ffeather_by_latortuguitaazul-d6ca3u4.png" style="width: 48px;"/>
+# **Sliding Puzzle Game** 
 
 ## Background
 Having studied Classics at University, this sliding puzzle game is inspired by the famous Greek myth of Daedalus and Icarus.
@@ -104,7 +104,6 @@ The wins were that my code works and I learnt an immense amount from the extensi
 
 Due to my planning, I decided it would be better for the boxes to be the divs themselves, rather than just the content within the divs, and this made the rest of my code must easier to execute.
 
-## Known Bugs
 
 
 
